@@ -1,3 +1,4 @@
 # Cryptocurrency-Price-Forecasting-Using-Hybrid-Models
-Kaito Hikino, Pranjal Chalise, Raghav Raj Sah
-Recurrent Revolutionaries
+Group Members: Kaito Hikino, Pranjal Chalise, Raghav Raj Sah
+
+Group Name: Recurrent Revolutionaries
