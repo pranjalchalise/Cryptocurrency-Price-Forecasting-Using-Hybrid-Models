@@ -1,0 +1,10 @@
+yfinance
+ta
+pandas
+numpy
+scikit-learn
+statsmodels
+xgboost==1.7.6
+tensorflow==2.18.0
+tqdm
+matplotlib 
