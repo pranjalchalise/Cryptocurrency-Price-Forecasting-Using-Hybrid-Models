@@ -6,103 +6,98 @@
 
 ## Project Overview
 
-This project aims to forecast the next-day closing price of Bitcoin using a combination of machine learning and deep learning models. We compare the performance of a simple baseline, an LSTM neural network, and plan to integrate ARIMA, XGBoost, and sentiment analysis for a hybrid approach. The goal is to build a robust pipeline for data preparation, model training, and evaluation, ultimately improving prediction accuracy through model ensembling.
+We've built a comprehensive cryptocurrency price forecasting system that combines multiple machine learning approaches to predict Bitcoin's next-day closing price. Our system includes a baseline model, LSTM neural networks, ARIMA, XGBoost, and sentiment analysis components. The project features a complete pipeline from data preparation to model evaluation, with a focus on improving prediction accuracy through model ensembling.
 
 ---
 
-## Folder Structure
+## Project Structure
 
 ```
 .
-├── Code/
-│   ├── baseline.ipynb                # Baseline "tomorrow = today" benchmark
-│   ├── lstm_model.ipynb              # LSTM model training and prediction
-│   └── milestone_1_crypto-forecast.ipynb # Data cleaning, feature engineering, train/test split
+├── Code/                             # Core implementation notebooks
+│   ├── baseline.ipynb                # Simple baseline model
+│   ├── lstm_model.ipynb              # LSTM implementation
+│   └── milestone_1_crypto-forecast.ipynb # Data preprocessing
 │
-├── Data/                             # (Not tracked) Raw and processed datasets
+├── Data/                             # Dataset storage (not tracked)
 │
-├── Presentations/                    # Project presentations and slides
+├── Presentations/                    # Project presentations
 │
-├── ARIMA,_XGBoost,_Updated_LTSM,_Baseline_and_HybridModel (1).ipynb # Hybrid and advanced models
-├── SentimentAnalysis.ipynb           # Sentiment analysis integration
-├── Abstract.pdf                      # Project abstract
-├── README.md                         # Project documentation
-├── requirements.txt                  # Python dependencies
-├── .gitignore                        # Excludes raw data and large files
+├── submission.ipynb                  # Final submission notebook
+├── paper.pdf                        # Project paper
+├── SentimentAnalysis.ipynb          # Sentiment analysis implementation
+├── ARIMA,_XGBoost,_Updated_LTSM,_Baseline_and_HybridModel (1).ipynb # Advanced models
+├── Abstract.pdf                     # Project abstract
+├── README.md                        # This file
+├── requirements.txt                 # Project dependencies
+└── .gitignore                       # Git ignore rules
 ```
 
-> **Note:** The `Data/` folder is excluded via `.gitignore` to avoid uploading large/raw datasets.
+> **Note:** The `Data/` directory is excluded from version control to keep the repository size manageable.
 
 ---
 
-## Setup & Run Instructions
+## Getting Started
 
-1. **Clone the repository and install dependencies:**
+1. **Clone and setup:**
    ```bash
-   git clone <https://github.com/Khik2219/Cryptocurrency-Price-Forecasting-Using-Hybrid-Models.git>
+   git clone https://github.com/Khik2219/Cryptocurrency-Price-Forecasting-Using-Hybrid-Models.git
    pip install -r requirements.txt
    ```
 
-2. **Prepare the data:**
-   - Open and run all cells in `Code/milestone_1_crypto-forecast.ipynb`.
+2. **Data preparation:**
+   - Run `Code/milestone_1_crypto-forecast.ipynb` to process the data
 
-3. **Run the baseline model:**
-   - Open and run all cells in `Code/baseline.ipynb`.
+3. **Model training:**
+   - Start with `Code/baseline.ipynb` for the simple model
+   - Try `Code/lstm_model.ipynb` for the LSTM implementation
+   - Explore `ARIMA,_XGBoost,_Updated_LTSM,_Baseline_and_HybridModel (1).ipynb` for advanced models
+   - Check out `SentimentAnalysis.ipynb` for sentiment-based predictions
 
-4. **Train the LSTM model:**
-   - Open and run all cells in `Code/lstm_model.ipynb`.
-
-5. **Run advanced/hybrid models:**
-   - Open and run all cells in `ARIMA,_XGBoost,_Updated_LTSM,_Baseline_and_HybridModel (1).ipynb`.
-
-6. **Sentiment analysis (optional/advanced):**
-   - Open and run all cells in `SentimentAnalysis.ipynb`.
-
-**Expected Output Example:**
-```
-Baseline  RMSE: 0.05
-LSTM      RMSE: 0.028
-```
-*(Values are in the 0–1 scaled space.)*
+4. **Final results:**
+   - See `submission.ipynb` for the complete implementation and results
+   - Read `paper.pdf` for detailed methodology and findings
 
 ---
 
-## What Each Script/Notebook Does
+## What's Inside
 
-- **Code/milestone_1_crypto-forecast.ipynb** – Loads raw data, cleans it, performs feature engineering, and splits into train/test sets.
-- **Code/baseline.ipynb** – Implements a naive baseline: predicts tomorrow’s close equals today’s close.
-- **Code/lstm_model.ipynb** – Builds and trains an LSTM model on 30-day sequences, outputs predictions.
-- **ARIMA,_XGBoost,_Updated_LTSM,_Baseline_and_HybridModel (1).ipynb** – Implements ARIMA, XGBoost, updated LSTM, baseline, and hybrid/ensemble models.
-- **SentimentAnalysis.ipynb** – Integrates sentiment data from social media for improved forecasting.
-
----
-
-## Planned Next Steps
-
-- Integrate Twitter/Reddit sentiment (CrypTop12 dataset)
-- Add ARIMA and XGBoost models
-- Create an ensemble (hybrid) model
-- Tune hyperparameters with grid search
+- **Data Processing** (`milestone_1_crypto-forecast.ipynb`): Handles data cleaning, feature engineering, and train/test splitting
+- **Baseline Model** (`baseline.ipynb`): Implements a simple "tomorrow equals today" prediction
+- **LSTM Model** (`lstm_model.ipynb`): Deep learning approach using 30-day sequences
+- **Advanced Models** (`ARIMA,_XGBoost,_Updated_LTSM,_Baseline_and_HybridModel (1).ipynb`): Combines multiple models for better predictions
+- **Sentiment Analysis** (`SentimentAnalysis.ipynb`): Integrates social media sentiment data
+- **Final Implementation** (`submission.ipynb`): Complete solution with all components
 
 ---
 
-## Additional Notes
+## Key Features
 
-- **.gitignore:** Raw data and large files (e.g., `Data/`, `.csv`) are excluded from version control.
-- **Licensing/Citation:** If using external datasets (e.g., Binance, Kaggle, CrypTop12), please cite the original sources as per their terms. For any external code, see comments in the relevant notebooks for attribution.
-- **File Naming:** All scripts and notebooks use clear, descriptive names for easy navigation.
+- Multiple model approaches (LSTM, ARIMA, XGBoost)
+- Sentiment analysis integration
+- Model ensembling
+- Comprehensive evaluation metrics
+- Clean, modular code structure
+
+---
+
+## Notes
+
+- The `Data/` directory is excluded from git to keep the repository size manageable
+- External datasets should be cited according to their original sources
+- All code is well-documented with clear explanations
 
 ---
 
 ## License
 
-This project is for academic purposes. For any external code or data, please refer to their respective licenses.
+This project is for academic purposes. External code and data are subject to their respective licenses.
 
 ---
 
 ## Contact
 
-For questions or collaboration, please contact us via GitHub.
+Feel free to reach out through GitHub for questions or collaboration.
 
 ---
 
